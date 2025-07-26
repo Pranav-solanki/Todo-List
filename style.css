@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(91, 90, 90);
+    background: linear-gradient(to bottom right, #2c3e50, #4b6cb7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+    height: 300px;
+    width: 400px;
+    /* background-color: pink; */
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.head {
+    width: 100%;
+    height: 70%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+
+}
+
+.cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* spacing between input and button */
+    padding: 10px 0;
+
+}
+
+.cont .inpt {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.cont .inpt::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.cont .inpt:focus {
+    border-color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+
+.cont .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cont .btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ans {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+    /* background-color: blueviolet; */
+}
+
+.ans li {
+    width: 100%;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* subtle background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 4px 0;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ans li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.03);
+}
+
+.ans .del {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: red;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ans .del:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+    transform: scale(1.5);
+}
+
+#themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+#themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.alt-dark-theme {
+    background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+    color: #c3c3ff;
+}
+
+body.alt-dark-theme .inpt {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(200, 200, 255, 0.2);
+    color: #e0e0ff;
+}
+
+body.alt-dark-theme .inpt::placeholder {
+    color: rgba(200, 200, 255, 0.3);
+}
+
+body.alt-dark-theme .inpt:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 6px #8e44ad;
+}
+
+body.alt-dark-theme .btn {
+    background-color: rgba(142, 68, 173, 0.3);
+    color: #e0e0ff;
+}
+
+body.alt-dark-theme .btn:hover {
+    background-color: rgba(142, 68, 173, 0.5);
+}
+
+body.alt-dark-theme #themeToggle {
+    color: #e0e0ff;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(200, 200, 255, 0.2);
+}
+
+body.alt-dark-theme #themeToggle:hover {
+    background-color: rgba(200, 200, 255, 0.1);
+}
+
+
+body.alt-dark-theme .ans li {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(200, 200, 255, 0.1);
+    color: #d6d6ff;
+}
+
+body.alt-dark-theme .del {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff6b6b;
+}
